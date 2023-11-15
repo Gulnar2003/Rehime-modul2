@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    
+}
+.todo-app h2{
+    display: flex;
+    color: aliceblue;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    background: rgb(211, 163, 230);
+}
+input{
+    border: none;
+    outline: none;
+    flex: 1;
+    background: transparent;
+    padding: 10px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    color: rgb(145, 52, 221);
+}
+button:hover{
+background: #ffda91;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: aliceblue;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked {
+    color: #4e085f;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    background-image: url(images/checked.png);  
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background:#6b00ee;
+}
+.image-container{
+    margin-right: 10px;
+}
